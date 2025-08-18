@@ -1,5 +1,4 @@
 package edu.ifal
-import edu.ifal.Lista01
 
 fun lista01() {
   var opcao: Int
