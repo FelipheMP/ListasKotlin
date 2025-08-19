@@ -26,9 +26,9 @@ fun lista01() {
         5 -> Lista01.calcularAPRetangulo()
         6 -> Lista01.calcularIMC()
         7 -> Lista01.calculadora()
-        else -> println("Opção inválida.")
       }
     }
+    else { println("Opção inválida.") }
   } while (opcao != 0)
 }
 
@@ -60,9 +60,9 @@ fun lista02() {
         6 -> Lista02.calcularIdadeMedia()
         7 -> Lista02.calcularMaiorMenorNumero()
         8 -> Lista02.numerosParesInterativo()
-        else -> println("Opção inválida.")
       }
     }
+    else { println("Opção inválida.") }
   } while (opcao != 0)
 }
 
@@ -82,9 +82,9 @@ fun main() {
       when (opcao) {
         1 -> lista01()
         2 -> lista02()
-        else -> println("Opção inválida.")
       }
     }
+    else { println("Opção inválida.") }
   } while (opcao != 0)
 
   println("Programa finalizado.")
