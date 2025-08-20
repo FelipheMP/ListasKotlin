@@ -28,7 +28,7 @@ fun lista01() {
         7 -> Lista01.calculadora()
       }
     }
-    else { println("Opção inválida.") }
+    else { if (opcao != 0) { println("Opção inválida.") } }
   } while (opcao != 0)
 }
 
@@ -62,7 +62,37 @@ fun lista02() {
         8 -> Lista02.numerosParesInterativo()
       }
     }
-    else { println("Opção inválida.") }
+    else { if (opcao != 0) { println("Opção inválida.") } }
+  } while (opcao != 0)
+}
+
+fun lista03() {
+  var opcao: Int
+
+  do {
+    println("\n=== Questões - Lista 03 ===")
+    println("1. Vetor de Números e Sua Soma")
+    println("2. Vetor de Números: Maior, Menor e Média")
+    println("3. Vetor de Notas: Alunos Aprovados, Reprovados, Média de Notas")
+    println("4. Inverso de um Vetor de Números")
+    println("5. Comparação Entre Dois Vetores")
+    println("6. Lista de Nomes e Consultas")
+    println("0. Sair")
+    print("Escolha uma opção: ")
+
+    opcao = readln().toInt()
+
+    if (opcao in 1..6) {
+      when (opcao) {
+        1 -> Lista03.vetorNumerosSoma()
+        2 -> Lista03.vetorNumerosMaiorMenorMedia()
+        3 -> Lista03.vetorAlunosAprovadosReprovadosMedia()
+        4 -> Lista03.inverterVetor()
+        5 -> Lista03.compararVetores()
+        6 -> Lista03.consultarListaDePessoas()
+      }
+    }
+    else { if (opcao != 0) { println("Opção inválida.") } }
   } while (opcao != 0)
 }
 
@@ -73,18 +103,20 @@ fun main() {
     println("\n=== Escolha a Lista de Questões ===")
     println("1. Lista 01")
     println("2. Lista 02")
+    println("3. Lista 03")
     println("0. Sair")
     print("Escolha uma opção: ")
 
     opcao = readln().toInt()
 
-    if (opcao in 1..2) {
+    if (opcao in 1..3) {
       when (opcao) {
         1 -> lista01()
         2 -> lista02()
+        3 -> lista03()
       }
     }
-    else { println("Opção inválida.") }
+    else { if (opcao != 0) { println("Opção inválida.") } }
   } while (opcao != 0)
 
   println("Programa finalizado.")
